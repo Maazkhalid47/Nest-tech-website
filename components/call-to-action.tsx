@@ -20,7 +20,7 @@ export function CallToAction() {
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Link
-              href="mailto:hello@studio.dev"
+              href="/contact"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium bg-accent text-accent-foreground rounded-sm hover:opacity-90 transition-opacity"
             >
               Start a Conversation
