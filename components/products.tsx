@@ -1,34 +1,8 @@
 import { ArrowUpRight } from "lucide-react"
 import Link from "next/link"
+import { projects } from "@/lib/data"
 
 export function Products() {
-  const projects = [
-    {
-      title: "Meridian",
-      category: "Infrastructure",
-      description:
-        "A distributed systems platform for real-time data processing at scale. Built to handle millions of events per second with sub-millisecond latency.",
-      tags: ["Rust", "Go", "Kubernetes"],
-      status: "Production",
-    },
-    {
-      title: "Canvas",
-      category: "Developer Tools",
-      description:
-        "Visual programming environment for complex system design. Enables teams to model, simulate, and deploy distributed architectures.",
-      tags: ["TypeScript", "WebGL", "WASM"],
-      status: "Beta",
-    },
-    {
-      title: "Forge",
-      category: "Hardware Interface",
-      description:
-        "Unified firmware development kit bridging embedded systems and cloud infrastructure. From microcontrollers to edge computing.",
-      tags: ["C++", "Embedded", "IoT"],
-      status: "Development",
-    },
-  ]
-
   return (
     <section id="work" className="py-24 md:py-32 scroll-mt-16">
       <div className="max-w-6xl mx-auto px-6">
@@ -46,8 +20,8 @@ export function Products() {
         <div className="grid gap-1">
           {projects.map((project, index) => (
             <Link
-              key={project.title}
-              href="#"
+              key={project.slug}
+              href={`/work/${project.slug}`}
               className="group block"
             >
               <article className="border border-border rounded-sm p-6 md:p-8 hover:bg-secondary/50 transition-colors">

@@ -1,40 +1,8 @@
 import { ArrowUpRight } from "lucide-react"
 import Link from "next/link"
+import { articles, topics } from "@/lib/data"
 
 export function Research() {
-  const articles = [
-    {
-      title: "On Building Resilient Distributed Systems",
-      date: "March 2026",
-      readTime: "12 min read",
-      excerpt:
-        "Exploring patterns for fault tolerance and graceful degradation in modern distributed architectures.",
-    },
-    {
-      title: "The Case for Vertical Integration",
-      date: "February 2026",
-      readTime: "8 min read",
-      excerpt:
-        "Why controlling the full stack—from hardware to user interface—creates better products.",
-    },
-    {
-      title: "Rethinking Developer Experience",
-      date: "January 2026",
-      readTime: "10 min read",
-      excerpt:
-        "How we approach tooling design to reduce cognitive load and increase engineering velocity.",
-    },
-  ]
-
-  const topics = [
-    "Distributed Systems",
-    "Embedded Computing",
-    "Human-Computer Interaction",
-    "Systems Architecture",
-    "Developer Tools",
-    "Edge Computing",
-  ]
-
   return (
     <section id="research" className="py-24 md:py-32 scroll-mt-16">
       <div className="max-w-6xl mx-auto px-6">
@@ -72,8 +40,8 @@ export function Research() {
             <div className="grid gap-1">
               {articles.map((article) => (
                 <Link
-                  key={article.title}
-                  href="#"
+                  key={article.slug}
+                  href={`/research/${article.slug}`}
                   className="group block"
                 >
                   <article className="border border-border rounded-sm p-6 hover:bg-secondary/50 transition-colors">
@@ -99,7 +67,7 @@ export function Research() {
             </div>
 
             <Link
-              href="#"
+              href="/research"
               className="mt-6 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               View all articles
