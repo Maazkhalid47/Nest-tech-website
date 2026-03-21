@@ -3,18 +3,18 @@ import { Manrope, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const manrope = Manrope({ 
+const manrope = Manrope({
   subsets: ["latin"],
   variable: '--font-sans'
 });
 
-const jetbrainsMono = JetBrains_Mono({ 
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: '--font-mono'
 });
 
 export const metadata: Metadata = {
-  title: 'Studio — Engineering & Product Development',
+  title: 'Nest Technologies — Engineering & Product Development',
   description: 'A technology studio focused on engineering, systems thinking, and product development. Building software, systems, and beyond.',
   generator: 'v0.app',
   icons: {
