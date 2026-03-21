@@ -39,10 +39,10 @@ export function CallToAction() {
             <div>
               <p className="text-sm font-medium text-foreground mb-2">Email</p>
               <a 
-                href="mailto:hello@studio.dev" 
+                href="mailto:hello@nesttechnologies.dev" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                hello@studio.dev
+                hello@nesttechnologies.dev
               </a>
             </div>
             <div>

@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props) {
   }
   
   return {
-    title: `${article.title} — Studio Research`,
+    title: `${article.title} — Nest Technologies Research`,
     description: article.excerpt,
   }
 }

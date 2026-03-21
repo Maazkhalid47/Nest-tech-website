@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props) {
   }
   
   return {
-    title: `${project.title} — Studio`,
+    title: `${project.title} — Nest Technologies`,
     description: project.description,
   }
 }

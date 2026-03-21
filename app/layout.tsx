@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: 'Nest Technologies — Engineering & Product Development',
-  description: 'A technology studio focused on engineering, systems thinking, and product development. Building software, systems, and beyond.',
+  description: 'Nest Technologies is focused on engineering, systems thinking, and product development. Building software, systems, and beyond.',
   generator: 'v0.app',
   icons: {
     icon: [

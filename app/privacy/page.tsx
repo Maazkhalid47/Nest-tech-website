@@ -2,14 +2,14 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 
 export const metadata = {
-  title: "Privacy Policy — Studio",
-  description: "How Studio collects, uses, and protects your personal information.",
+  title: "Privacy Policy — Nest Technologies",
+  description: "How Nest Technologies collects, uses, and protects your personal information.",
 }
 
 const sections = [
   {
     title: "Introduction",
-    content: `At Studio, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+    content: `At Nest Technologies, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
 
 By using our services, you consent to the data practices described in this policy. We encourage you to read this Privacy Policy carefully to understand our practices regarding your personal data and how we will treat it.`,
   },
@@ -83,7 +83,7 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
   },
   {
     title: "Contact Us",
-    content: `If you have any questions about this Privacy Policy or our data practices, please contact us at privacy@studio.dev. We will make every effort to respond to your inquiry within a reasonable timeframe and address any concerns you may have.`,
+    content: `If you have any questions about this Privacy Policy or our data practices, please contact us at privacy@nesttechnologies.dev. We will make every effort to respond to your inquiry within a reasonable timeframe and address any concerns you may have.`,
   },
 ]
 

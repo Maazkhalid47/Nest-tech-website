@@ -24,10 +24,10 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-4">
             <Link href="/" className="font-semibold text-lg tracking-tight text-foreground">
-              Studio
+              Nest Technologies
             </Link>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Engineering and product development studio. Building software, systems, and beyond.
+              Engineering and product development. Building software, systems, and beyond.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Studio. All rights reserved.
+            © {currentYear} Nest Technologies. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link

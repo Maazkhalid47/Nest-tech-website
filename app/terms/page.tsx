@@ -2,14 +2,14 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 
 export const metadata = {
-  title: "Terms of Service — Studio",
-  description: "Terms and conditions for using Studio's website and services.",
+  title: "Terms of Service — Nest Technologies",
+  description: "Terms and conditions for using Nest Technologies' website and services.",
 }
 
 const sections = [
   {
     title: "Introduction",
-    content: `Welcome to Studio. These Terms of Service ("Terms") govern your access to and use of our website, products, and services. By accessing or using our services, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our services.
+    content: `Welcome to Nest Technologies. These Terms of Service ("Terms") govern your access to and use of our website, products, and services. By accessing or using our services, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our services.
 
 These Terms apply to all visitors, users, and others who access or use our services. We may update these Terms from time to time, and we will notify you of any material changes by posting the new Terms on this page.`,
   },
@@ -21,9 +21,9 @@ You must not misuse our services by knowingly introducing viruses, trojans, worm
   },
   {
     title: "Intellectual Property",
-    content: `All content included on this website, such as text, graphics, logos, images, audio clips, digital downloads, data compilations, and software, is the property of Studio or its content suppliers and is protected by international copyright laws.
+    content: `All content included on this website, such as text, graphics, logos, images, audio clips, digital downloads, data compilations, and software, is the property of Nest Technologies or its content suppliers and is protected by international copyright laws.
 
-The compilation of all content on this website is the exclusive property of Studio and is protected by international copyright laws. All software used on this website is the property of Studio or its software suppliers and is protected by international copyright laws.
+The compilation of all content on this website is the exclusive property of Nest Technologies and is protected by international copyright laws. All software used on this website is the property of Nest Technologies or its software suppliers and is protected by international copyright laws.
 
 You may not reproduce, duplicate, copy, sell, resell, or exploit any portion of the service, use of the service, or access to the service without express written permission from us.`,
   },
@@ -41,19 +41,19 @@ From time to time, we may restrict access to some parts of the website, or the e
   },
   {
     title: "Limitation of Liability",
-    content: `In no event shall Studio, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the services.
+    content: `In no event shall Nest Technologies, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the services.
 
 This limitation applies regardless of whether the damages are based on warranty, contract, tort, or any other legal theory, and whether or not we have been informed of the possibility of such damages.`,
   },
   {
     title: "Governing Law",
-    content: `These Terms shall be governed and construed in accordance with the laws of the jurisdiction in which Studio operates, without regard to its conflict of law provisions.
+    content: `These Terms shall be governed and construed in accordance with the laws of the jurisdiction in which Nest Technologies operates, without regard to its conflict of law provisions.
 
 Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.`,
   },
   {
     title: "Contact Information",
-    content: `If you have any questions about these Terms, please contact us at legal@studio.dev. We will make every effort to respond to your inquiry within a reasonable timeframe.`,
+    content: `If you have any questions about these Terms, please contact us at legal@nesttechnologies.dev. We will make every effort to respond to your inquiry within a reasonable timeframe.`,
   },
 ]
 
