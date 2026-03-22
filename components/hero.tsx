@@ -27,7 +27,7 @@ export function Hero() {
               View Our Work
             </Link>
             <Link 
-              href="#philosophy"
+              href="#approach"
               className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium border border-border text-foreground rounded-sm hover:bg-secondary transition-colors"
             >
               Our Approach
