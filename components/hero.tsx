@@ -7,11 +7,11 @@ export function Hero() {
       <div className="max-w-6xl mx-auto px-6 py-24 md:py-32">
         <div className="max-w-4xl">
           <p className="text-sm font-mono text-muted-foreground mb-6 tracking-wide uppercase">
-            Nest Technologies
+            Software, Systems, and beyond
           </p>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] tracking-tight text-foreground text-balance">
-            We build systems that matter.
+            Building systems that matter.
           </h1>
           
           <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
