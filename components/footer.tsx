@@ -5,15 +5,14 @@ export function Footer() {
 
   const navigation = {
     main: [
-      { name: "Philosophy", href: "#philosophy" },
-      { name: "Work", href: "#work" },
-      { name: "Research", href: "#research" },
-      { name: "Contact", href: "#contact" },
+      { name: "Philosophy", href: "/#philosophy" },
+      { name: "Work", href: "/#work" },
+      { name: "Research", href: "/#research" },
+      { name: "Contact", href: "/#contact" },
     ],
     social: [
-      { name: "GitHub", href: "#" },
-      { name: "Twitter", href: "#" },
-      { name: "LinkedIn", href: "#" },
+      { name: "GitHub", href: "https://github.com/Maazkhalid47" },
+      { name: "LinkedIn", href: "https://www.linkedin.com/in/marskhalid/" },
     ],
   }
 
@@ -56,6 +55,8 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
+                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                    rel={item.href.startsWith("http") ? "noreferrer" : undefined}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {item.name}
