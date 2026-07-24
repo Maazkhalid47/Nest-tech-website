@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
+import { Footer } from "@/components/footer"
 
 export const metadata = {
   title: "Terms of Service — Nest Technologies",
@@ -53,7 +54,7 @@ Our failure to enforce any right or provision of these Terms will not be conside
   },
   {
     title: "Contact Information",
-    content: `If you have any questions about these Terms, please contact us at legal@nesttechnologies.dev. We will make every effort to respond to your inquiry within a reasonable timeframe.`,
+    content: `If you have any questions about these Terms, please contact us at maazking47@gmail.com. We will make every effort to respond to your inquiry within a reasonable timeframe.`,
   },
 ]
 
@@ -119,6 +120,7 @@ export default function TermsPage() {
           </p>
         </footer>
       </article>
+      <Footer />
     </main>
   )
 }
