@@ -19,19 +19,15 @@ export function CallToAction() {
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium bg-accent text-accent-foreground rounded-sm hover:opacity-90 transition-opacity"
-            >
-              Start a Conversation
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="#"
-              className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium border border-border text-foreground rounded-sm hover:bg-secondary transition-colors"
-            >
-              View Case Studies
-            </Link>
+ <Link
+  href="/contact"
+  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium rounded-sm transition-all bg-primary text-primary-foreground hover:opacity-90"
+>
+  Start a Conversation
+  <ArrowRight className="w-4 h-4" />
+</Link>
+
+
           </div>
 
           {/* Contact Details */}
@@ -39,16 +35,16 @@ export function CallToAction() {
             <div>
               <p className="text-sm font-medium text-foreground mb-2">Email</p>
               <a 
-                href="mailto:info@nesttechnologies.io" 
+                href="mailto:maazking47@gmail.com" 
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                info@nesttechnologies.io
+                maazking47@gmail.com
               </a>
             </div>
             <div>
               <p className="text-sm font-medium text-foreground mb-2">Location</p>
               <p className="text-sm text-muted-foreground">
-                Karachi, PK
+                Karachi, Pakistan
               </p>
             </div>
           </div>
