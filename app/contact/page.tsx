@@ -260,16 +260,16 @@ export default function ContactPage() {
                   <div>
                     <p className="text-sm text-muted-foreground mb-1">Email</p>
                     <a 
-                      href="mailto:maazking47@gmail.com" 
+                      href="mailto:hello@nesttechnologies.dev" 
                       className="text-sm text-foreground hover:text-accent transition-colors"
                     >
-                      maazking47@gmail.com
+                      hello@nesttechnologies.dev
                     </a>
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground mb-1">Location</p>
                     <p className="text-sm text-foreground">
-                      Karachi, Pakistan
+                      San Francisco, CA
                     </p>
                   </div>
                 </div>

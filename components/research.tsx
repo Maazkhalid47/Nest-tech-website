@@ -66,6 +66,13 @@ export function Research() {
               ))}
             </div>
 
+            <Link
+              href="/research"
+              className="mt-6 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              View all articles
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
         </div>
       </div>
