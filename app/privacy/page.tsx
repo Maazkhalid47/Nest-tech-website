@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
-import { Footer } from "@/components/footer"
 
 export const metadata = {
   title: "Privacy Policy — Nest Technologies",
@@ -84,7 +83,7 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
   },
   {
     title: "Contact Us",
-    content: `If you have any questions about this Privacy Policy or our data practices, please contact us at maazking47@gmail.com. We will make every effort to respond to your inquiry within a reasonable timeframe and address any concerns you may have.`,
+    content: `If you have any questions about this Privacy Policy or our data practices, please contact us at privacy@nesttechnologies.dev. We will make every effort to respond to your inquiry within a reasonable timeframe and address any concerns you may have.`,
   },
 ]
 
@@ -150,7 +149,6 @@ export default function PrivacyPage() {
           </p>
         </footer>
       </article>
-      <Footer />
     </main>
   )
 }
