@@ -1,206 +1,224 @@
-export const projects = [
+export type WorkItem = {
+  slug: string;
+  num: string;
+  name: string;
+  description: string;
+  tags: string[];
+  status: "production" | "beta" | "development";
+  statusLabel: string;
+  category: string;
+  problem: string;
+  approachTitle: string;
+  approach: string[];
+  outcomeTitle: string;
+  outcome: string;
+};
+
+export const workItems: WorkItem[] = [
   {
-    slug: "meridian",
-    title: "Meridian",
-    category: "Infrastructure",
+    slug: "momflex",
+    num: "01",
+    name: "MomFlex",
     description:
-      "A distributed systems platform for real-time data processing at scale. Built to handle millions of events per second with sub-millisecond latency.",
-    tags: ["Rust", "Go", "Kubernetes"],
-    status: "Production",
-    fullDescription: `Meridian represents our vision for the future of data infrastructure. Built from the ground up to handle the demands of modern distributed systems, it provides a unified platform for real-time data processing, stream analytics, and event-driven architectures.
-
-The platform is designed around three core principles: predictable latency, horizontal scalability, and operational simplicity. Every component has been engineered to maintain sub-millisecond latency even under extreme load conditions.`,
-    challenges: [
-      "Processing millions of events per second with consistent sub-millisecond latency",
-      "Maintaining data consistency across globally distributed nodes",
-      "Providing intuitive debugging tools for complex distributed workflows",
+      "A comprehensive digital platform empowering parents through financial assistance, wellness tools, community engagement, and essential digital services.",
+    tags: ["FinTech", "Community Platform", "FlutterFlow", "Flutter", "Supabase", "Firebase", "PostgreSQL", "Stripe", "Google Cloud", "OneSignal"],
+    status: "production",
+    statusLabel: "Production",
+    category: "FinTech / Community Platform",
+    problem:
+      "MomFlex set out to give parents a single place to manage financial assistance, wellness, and community support — but as the platform grew, the underlying architecture needed to scale with it. Nest Technologies was brought in to strengthen the foundation without slowing down the product's momentum.",
+    approachTitle: "What We Did",
+    approach: [
+      "We led product architecture improvements and backend modernization across the platform, refining financial assistance workflows and building out FitMind, the platform's dedicated wellness experience, alongside community engagement features.",
+      "On the infrastructure side, we implemented secure authentication, integrated Stripe for payments, and optimized the database and system architecture for long-term scalability — all built on FlutterFlow, Flutter, Supabase, Firebase, PostgreSQL, and Google Cloud, with OneSignal handling notifications.",
     ],
-    approach: `We started with a clean-slate approach, building our own consensus protocol optimized for high-throughput scenarios. The system uses a novel partitioning scheme that automatically balances load while minimizing data movement.
-
-The control plane is written in Go for its excellent concurrency primitives, while the data plane leverages Rust for zero-cost abstractions and predictable performance. This hybrid approach gives us the best of both worlds.`,
-    outcomes: [
-      "Sustained throughput of 2.4 million events/second per node",
-      "P99 latency under 800 microseconds",
-      "Zero-downtime deployments and automatic failover",
-    ],
-    year: "2024 - Present",
+    outcomeTitle: "Outcomes",
+    outcome:
+      "MomFlex now runs on a more scalable, maintainable foundation — with improved performance, a modernized backend, and infrastructure built to support the platform's long-term growth.",
   },
   {
-    slug: "canvas",
-    title: "Canvas",
-    category: "Developer Tools",
+    slug: "my-trade-pal",
+    num: "02",
+    name: "My Trade Pal",
     description:
-      "Visual programming environment for complex system design. Enables teams to model, simulate, and deploy distributed architectures.",
-    tags: ["TypeScript", "WebGL", "WASM"],
-    status: "Beta",
-    fullDescription: `Canvas reimagines how teams design and understand complex systems. Rather than forcing engineers to hold entire architectures in their heads, Canvas provides a visual workspace where systems can be modeled, simulated, and deployed.
-
-The tool bridges the gap between whiteboard diagrams and production infrastructure, enabling teams to iterate on system designs with immediate feedback.`,
-    challenges: [
-      "Creating a visual language expressive enough for complex distributed systems",
-      "Achieving real-time simulation performance in the browser",
-      "Generating production-ready infrastructure code from visual models",
+      "A modern marketplace platform on mobile and web, connecting buyers and sellers through a streamlined, cross-platform experience.",
+    tags: ["Marketplace Platform", "FlutterFlow", "Flutter", "Supabase", "PostgreSQL"],
+    status: "production",
+    statusLabel: "Production",
+    category: "Marketplace Platform",
+    problem:
+      "My Trade Pal needed a marketplace experience that felt consistent and fast whether buyers and sellers were on mobile or web — with listings, navigation, and infrastructure built to scale as the marketplace grew.",
+    approachTitle: "What We Did",
+    approach: [
+      "We built the platform cross-platform from the ground up — a native mobile application paired with a responsive web experience, sharing the same backend integration, authentication, and marketplace workflows underneath.",
+      "The stack combines FlutterFlow and Flutter for the front end with Supabase and PostgreSQL on the backend, with user management and performance optimization built in to keep the experience smooth as listings and traffic scale.",
     ],
-    approach: `We developed a custom graph rendering engine using WebGL, capable of smoothly handling diagrams with thousands of nodes. The simulation engine runs in WebAssembly, providing near-native performance for complex calculations.
-
-The code generation system uses a constraint-solving approach to produce optimized infrastructure configurations that respect the relationships defined in the visual model.`,
-    outcomes: [
-      "60fps rendering with 10,000+ nodes",
-      "Real-time simulation of distributed consensus algorithms",
-      "One-click deployment to major cloud providers",
-    ],
-    year: "2025 - Present",
+    outcomeTitle: "Outcomes",
+    outcome:
+      "My Trade Pal now offers a seamless marketplace experience across both mobile and web, with an infrastructure designed to handle growing listings, users, and transactions reliably.",
   },
   {
-    slug: "forge",
-    title: "Forge",
-    category: "Hardware Interface",
+    slug: "mealmakers",
+    num: "03",
+    name: "Mealmakers",
     description:
-      "Unified firmware development kit bridging embedded systems and cloud infrastructure. From microcontrollers to edge computing.",
-    tags: ["C++", "Embedded", "IoT"],
-    status: "Development",
-    fullDescription: `Forge addresses the growing complexity of building products that span from tiny microcontrollers to cloud backends. It provides a unified development experience that abstracts away the differences between these environments while preserving full control when needed.
-
-The toolkit includes a cross-platform build system, over-the-air update infrastructure, and observability tools designed for resource-constrained devices.`,
-    challenges: [
-      "Supporting the full spectrum from 8-bit microcontrollers to edge servers",
-      "Providing meaningful debugging for devices with minimal resources",
-      "Enabling secure, reliable over-the-air updates at scale",
+      "A digital platform that simplifies meal planning and food-related services through an intuitive experience and modern application architecture.",
+    tags: ["Food & Lifestyle", "FlutterFlow", "Supabase", "PostgreSQL"],
+    status: "production",
+    statusLabel: "Production",
+    category: "Food & Lifestyle",
+    problem:
+      "Meal planning tools often feel clunky and disconnected from how people actually cook and shop. Mealmakers needed an application that made the experience intuitive from day one, backed by an architecture that could support new features as the product matured.",
+    approachTitle: "What We Did",
+    approach: [
+      "We handled mobile application development and UI implementation end-to-end, working from design through to a polished, intuitive user experience for meal planning and food-related services.",
+      "On the backend, we built out the database architecture, backend integration, and authentication using Supabase and PostgreSQL — with FlutterFlow powering the front end for fast iteration without compromising on quality.",
     ],
-    approach: `Forge is built around a layered abstraction model. The core runtime is written in C++ with aggressive optimization for code size and memory usage. Higher-level features can be progressively enabled based on device capabilities.
-
-Our update system uses a novel delta compression algorithm that reduces update sizes by up to 95%, making frequent updates practical even over constrained networks.`,
-    outcomes: [
-      "Single codebase targets 50+ device families",
-      "Runtime overhead under 4KB on constrained devices",
-      "Secure boot and encrypted update pipeline",
-    ],
-    year: "2025 - Present",
+    outcomeTitle: "Outcomes",
+    outcome:
+      "Mealmakers now runs on a clean, modern architecture with an intuitive user experience — giving the team a solid foundation to keep building new features on top of.",
   },
-]
+];
 
-export const articles = [
+export type Article = {
+  slug: string;
+  date: string;
+  readTime: string;
+  category: string;
+  title: string;
+  excerpt: string;
+  content: { type: "p" | "h2" | "quote"; text: string }[];
+};
+
+export const articles: Article[] = [
   {
-    slug: "building-resilient-distributed-systems",
-    title: "On Building Resilient Distributed Systems",
+    slug: "why-most-mvps-fail-before-launch",
     date: "March 2026",
-    readTime: "12 min read",
+    readTime: "9 min read",
+    category: "Product Strategy",
+    title: "Why Most MVPs Fail Before Launch",
     excerpt:
-      "Exploring patterns for fault tolerance and graceful degradation in modern distributed architectures.",
-    content: `Modern distributed systems face an uncomfortable reality: failure is not an exception, it's the norm. Networks partition, disks fail, processes crash. The question isn't whether these failures will occur, but how our systems respond when they inevitably do.
-
-## The Illusion of Reliability
-
-We often design systems as if individual components are reliable and then add error handling as an afterthought. This approach is fundamentally backwards. True resilience requires accepting unreliability as a first principle and designing systems that maintain useful behavior despite it.
-
-## Patterns for Graceful Degradation
-
-### Circuit Breakers
-
-The circuit breaker pattern prevents cascade failures by failing fast when a dependency becomes unhealthy. Rather than waiting for timeouts, the system quickly returns errors or fallback responses, preserving resources for requests that can succeed.
-
-### Bulkheads
-
-Named after ship compartments that contain flooding, bulkheads isolate failures to specific subsystems. By partitioning resources—thread pools, connection pools, memory—failures in one area cannot starve others.
-
-### Timeouts and Retries
-
-Every network call needs a timeout. Without one, a single slow dependency can exhaust all available resources. Retries must be implemented with exponential backoff and jitter to prevent thundering herds.
-
-## Building for Partial Failure
-
-The most resilient systems are designed to function partially. When the recommendation service fails, show popular items. When the analytics pipeline backs up, accept writes and process later. These graceful degradation strategies preserve the most critical functionality.
-
-## Observability as Foundation
-
-You cannot build resilient systems without understanding how they fail. Comprehensive logging, metrics, and distributed tracing are not optional—they're the foundation upon which all other resilience strategies are built.`,
-    topics: ["Distributed Systems", "Systems Architecture"],
+      "Building an MVP isn't about building less—it's about validating the right assumptions. Learn why many MVPs fail before reaching users and how a product-first approach can reduce risk.",
+    content: [
+      {
+        type: "p",
+        text: "Most founders treat an MVP as a smaller version of their final product — trim the feature list, ship what's left, and call it minimal. That framing is where things start to go wrong.",
+      },
+      {
+        type: "quote",
+        text: "An MVP isn't a smaller product. It's the fastest, cheapest way to test whether your riskiest assumption is actually true.",
+      },
+      { type: "h2", text: "The Assumption Problem" },
+      {
+        type: "p",
+        text: "Every product idea rests on a stack of assumptions — that people have the problem you think they have, that they'd pay to solve it, that your approach is the right one. Most MVPs fail not because the engineering was weak, but because they were built to prove the product could exist, not that it should.",
+      },
+      {
+        type: "p",
+        text: "Before a single screen gets designed, it's worth writing down the two or three assumptions that would sink the entire idea if they turned out to be false. Those are the ones the MVP needs to test — everything else can wait.",
+      },
+      { type: "h2", text: "Scope Is a Strategy Decision, Not an Engineering One" },
+      {
+        type: "p",
+        text: "Teams often let scope get decided by what's technically easy to build first, rather than what's most informative to learn first. The result is an MVP that's genuinely minimal, but tests nothing of consequence.",
+      },
+      {
+        type: "p",
+        text: "A product-first approach flips this: define what you need to learn, then figure out the smallest, fastest thing that gets you a real answer — even if that means building the 'hard' part first because that's where the actual risk lives.",
+      },
+      { type: "h2", text: "Launch Is the Start of Validation, Not the Finish Line" },
+      {
+        type: "p",
+        text: "The MVPs that succeed treat launch as day one of a feedback loop, not a finish line. They're instrumented to tell the team something, and the team is set up to act on what they learn quickly.",
+      },
+      {
+        type: "p",
+        text: "At Nest, this is where we spend the most time with founders before any code gets written — getting clear on what the MVP actually needs to prove, so the build effort goes toward reducing real risk instead of just shipping something.",
+      },
+    ],
   },
   {
-    slug: "case-for-vertical-integration",
-    title: "The Case for Vertical Integration",
+    slug: "flutterflow-for-startups",
     date: "February 2026",
     readTime: "8 min read",
+    category: "Engineering",
+    title: "FlutterFlow for Startups: When It Works and When It Doesn't",
     excerpt:
-      "Why controlling the full stack—from hardware to user interface—creates better products.",
-    content: `There's a prevailing wisdom in technology that companies should focus on their core competency and outsource everything else. While this makes sense in many contexts, we've found that vertical integration—controlling the full stack from hardware to user interface—enables a category of products that would otherwise be impossible.
-
-## The Integration Tax
-
-When you build on components from multiple vendors, you pay an integration tax. Each interface between components adds latency, complexity, and potential failure modes. These costs compound as systems grow more complex.
-
-## Optimization Across Boundaries
-
-The most significant optimizations often require changes that span traditional boundaries. When you control both the hardware and software, you can make tradeoffs that would be impossible with off-the-shelf components.
-
-Consider how Apple's custom silicon enables features that would be impractical with commodity processors. Or how Tesla's vertical integration allows over-the-air updates to improve vehicle performance.
-
-## The Feedback Loop Advantage
-
-Vertical integration creates faster feedback loops. When the team building the hardware works closely with the team building the software, problems are discovered earlier and solutions are more elegant.
-
-## When to Integrate Vertically
-
-Vertical integration makes sense when:
-- The interfaces between components are a significant source of complexity or performance limitations
-- Your use case differs significantly from the mainstream, making commodity solutions suboptimal
-- Long-term control and customization outweigh the upfront investment
-
-## The Operational Challenge
-
-Vertical integration isn't free. It requires broader expertise, more capital, and longer timelines. But for the right problems, the results justify the investment.`,
-    topics: ["Systems Architecture", "Hardware Interface"],
+      "FlutterFlow can dramatically accelerate product development, but understanding where it fits—and where custom engineering becomes necessary—is key to building scalable software.",
+    content: [
+      {
+        type: "p",
+        text: "FlutterFlow has become a serious tool for startups that need to move fast — a visual builder on top of Flutter that can take a product from idea to a working cross-platform app far quicker than starting from scratch.",
+      },
+      { type: "h2", text: "Where It Genuinely Wins" },
+      {
+        type: "p",
+        text: "For early-stage products, internal tools, and MVPs where speed and iteration matter more than deep customization, FlutterFlow removes a huge amount of boilerplate. Teams can wire up UI, navigation, and backend connections — often to Supabase or Firebase — in a fraction of the time a fully custom build would take.",
+      },
+      {
+        type: "p",
+        text: "It also keeps a single codebase shipping to iOS, Android, and web at once, which matters a lot for startups that can't afford separate native teams.",
+      },
+      { type: "h2", text: "Where It Starts to Strain" },
+      {
+        type: "p",
+        text: "The friction shows up as products mature — highly custom interactions, complex state management, or deep platform-specific integrations can push against what the visual builder comfortably handles. Performance-critical features and unusual architectural requirements are where hand-written code still has the edge.",
+      },
+      {
+        type: "p",
+        text: "This isn't a flaw in the tool — it's a scope mismatch. FlutterFlow is built to optimize for speed on the 80% of a product that's fairly standard, not to be the right tool for every edge case.",
+      },
+      { type: "h2", text: "The Hybrid Approach" },
+      {
+        type: "p",
+        text: "The teams that get the most out of FlutterFlow don't treat it as all-or-nothing. They build the majority of the product visually, and drop into custom Flutter code exactly where the requirements demand it — keeping velocity high without giving up control where it matters.",
+      },
+      {
+        type: "p",
+        text: "That's the model we lean on at Nest: FlutterFlow to move fast where speed is the priority, and custom engineering where the product genuinely needs it.",
+      },
+    ],
   },
   {
-    slug: "rethinking-developer-experience",
-    title: "Rethinking Developer Experience",
+    slug: "building-scalable-products-with-flutterflow-and-supabase",
     date: "January 2026",
-    readTime: "10 min read",
+    readTime: "8 min read",
+    category: "Architecture",
+    title: "Building Scalable Products with FlutterFlow & Supabase",
     excerpt:
-      "How we approach tooling design to reduce cognitive load and increase engineering velocity.",
-    content: `Developer tools have a profound impact on engineering velocity. Yet most tools are designed around technical constraints rather than human factors. We believe there's an opportunity to rethink developer experience from first principles.
-
-## Cognitive Load is the Enemy
-
-Every tool, every abstraction, every configuration option adds cognitive load. This load accumulates throughout the day, leaving less mental capacity for the actual problem at hand.
-
-Good developer tools minimize cognitive load by:
-- Providing sensible defaults that work for the common case
-- Making the right thing the easy thing
-- Surfacing information at the moment it's needed, not before
-
-## The Power of Immediate Feedback
-
-The time between making a change and seeing its effect is critical. Long feedback loops don't just slow development—they fundamentally change how we work, encouraging batch changes and reducing experimentation.
-
-We invest heavily in reducing feedback loops:
-- Hot reloading that preserves application state
-- Incremental compilation that rebuilds only what changed
-- Preview environments that spin up in seconds
-
-## Error Messages as Documentation
-
-Error messages are often the first interaction developers have with a tool's mental model. Yet they're frequently an afterthought—cryptic codes that require searching external documentation.
-
-We treat error messages as first-class user interface:
-- Clear explanation of what went wrong
-- Actionable suggestions for how to fix it
-- Links to relevant documentation when appropriate
-
-## Building for the Debug Loop
-
-Developers spend significant time debugging. Tools should be designed with this reality in mind, providing rich introspection capabilities and making system state visible.
-
-The best developer tools don't just help you write code—they help you understand what your code is doing.`,
-    topics: ["Developer Tools", "Human-Computer Interaction"],
+      "Discover how combining FlutterFlow with Supabase creates a powerful foundation for startups while maintaining flexibility for long-term growth.",
+    content: [
+      {
+        type: "p",
+        text: "FlutterFlow gets a product's front end moving fast. Supabase gives it a backend that doesn't box the team in later. Together, they form a foundation that a lot of startups underestimate.",
+      },
+      { type: "h2", text: "Why This Pairing Works" },
+      {
+        type: "p",
+        text: "Supabase is built on Postgres — a proven, relational database that scales well and doesn't lock a team into a proprietary query model. Paired with FlutterFlow's native Supabase integration, teams get real-time data, authentication, and storage wired into their UI without writing custom backend glue code for every screen.",
+      },
+      {
+        type: "p",
+        text: "Because it's Postgres underneath, the data layer stays flexible — teams can write raw SQL, add complex relations, or set up row-level security policies as the product's needs grow more sophisticated.",
+      },
+      { type: "h2", text: "Designing for Growth From Day One" },
+      {
+        type: "p",
+        text: "The mistake we see most often is treating the database schema as an afterthought because the front end is moving so fast. A few hours spent designing the data model properly — clear relationships, sensible indexing, row-level security from the start — saves weeks of migration pain later.",
+      },
+      {
+        type: "p",
+        text: "The same applies to authentication and permissions: setting these up correctly early means the product can add new user types or features without re-architecting how access control works.",
+      },
+      { type: "h2", text: "Knowing When to Extend Beyond the Stack" },
+      {
+        type: "p",
+        text: "This foundation takes a startup remarkably far, but it's not meant to be the ceiling. As products scale, teams often add custom backend services, edge functions, or additional infrastructure alongside Supabase — and because the core is standard Postgres and Flutter, that extension path stays open rather than requiring a rewrite.",
+      },
+      {
+        type: "p",
+        text: "That flexibility is the real value: a fast starting point that doesn't force a painful migration once the product finds traction.",
+      },
+    ],
   },
-]
-
-export const topics = [
-  "Distributed Systems",
-  "Embedded Computing",
-  "Human-Computer Interaction",
-  "Systems Architecture",
-  "Developer Tools",
-  "Edge Computing",
-]
+];
