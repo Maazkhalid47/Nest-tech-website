@@ -322,9 +322,6 @@ export default function Home() {
               platform — we&apos;re interested.
             </p>
             <div className="contact-actions">
-              <a href="mailto:maazking47@gmail.com" className="btn btn-primary">
-                Start a Conversation
-              </a>
               <Link href="#work" className="btn btn-ghost">
                 View Case Studies
               </Link>

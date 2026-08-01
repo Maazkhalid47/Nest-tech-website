@@ -54,7 +54,7 @@ export default function ContactForm() {
 
   return (
     <>
-      <div className="contact-form">
+      <div className="contact-form" id="contact-form">
         <div className="form-group">
           <label>Full Name</label>
           <input
