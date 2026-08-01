@@ -9,7 +9,7 @@ export const metadata = {
 const sections = [
   {
     title: "Introduction",
-    content: `At Nest Technologies, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+    content: `ur information when you visit our website or use our services.
 
 By using our services, you consent to the data practices described in this policy. We encourage you to read this Privacy Policy carefully to understand our practices regarding your personal data and how we will treat it.`,
   },
