@@ -329,7 +329,7 @@ export default function Home() {
             <div style={{ marginTop: 56, display: "flex", flexDirection: "column", gap: 28 }}>
               <div className="contact-detail">
                 <label>Email</label>
-                <a href="mailto:maazking47@gmail.com">maazking47@gmail.com</a>
+                <a href="mailto:info@nesttechnologies.io">info@nesttechnologies.io</a>
               </div>
               <div className="contact-detail">
                 <label>Location</label>

@@ -195,7 +195,7 @@ export default function TermsPage() {
         <p>
           Nest Technologies
           <br />
-          Email: <a href="mailto:maazking47@gmail.com">maazking47@gmail.com</a>
+          Email: <a href="mailto:info@nesttechnologies.io">info@nesttechnologies.io</a>
           <br />
           Location: Karachi, Pakistan
         </p>
