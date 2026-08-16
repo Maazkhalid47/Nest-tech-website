@@ -14,6 +14,24 @@ export type WorkItem = {
   outcome: string;
 };
 
+// Icon mapping for technologies
+export const techIcons: Record<string, string> = {
+  "FinTech": "💰",
+  "Community Platform": "👥",
+  "FlutterFlow": "⚡",
+  "Flutter": "🎨",
+  "Supabase": "🔷",
+  "Firebase": "🔥",
+  "PostgreSQL": "🐘",
+  "Stripe": "💳",
+  "Google Cloud": "☁️",
+  "OneSignal": "🔔",
+  "Marketplace Platform": "🛍️",
+  "Food & Lifestyle": "🍽️",
+  "Next.js": "▲",
+  "Node.js": "🟢",
+};
+
 export const workItems: WorkItem[] = [
   {
     slug: "momflex",
