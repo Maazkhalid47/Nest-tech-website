@@ -1,5 +1,6 @@
 "use client";
 
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
 export default function ContactForm() {
@@ -18,13 +19,43 @@ export default function ContactForm() {
     setTimeout(() => setToast((t) => ({ ...t, show: false })), 4200);
   }
 
-  function handleSubmit() {
+  async function handleSubmit() {
     const n = name.trim();
     const e = email.trim();
     const m = message.trim();
     if (!n || !e || !m) {
       fireToast("Please fill in your name, email, and message.");
       return;
+    }
+
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (serviceId && templateId && publicKey) {
+      try {
+        emailjs.init({ publicKey });
+        await emailjs.send(serviceId, templateId, {
+          from_name: n,
+          from_email: e,
+          company: company.trim() || "N/A",
+          budget: budget.trim() || "N/A",
+          message: m,
+          recipient_email: "info@nesttechnologies.io",
+        });
+
+        fireToast(
+          "Thank you for reaching out! We've received your message and will get back to you within one business day."
+        );
+        setName("");
+        setEmail("");
+        setCompany("");
+        setBudget("");
+        setMessage("");
+        return;
+      } catch (error) {
+        console.error("EmailJS send failed", error);
+      }
     }
 
     const subject = `New Project Inquiry from ${n}`;
@@ -43,7 +74,7 @@ export default function ContactForm() {
     window.location.href = mailto;
 
     fireToast(
-      "Thank you for reaching out! We've received your message and will get back to you within one business day."
+      "Thank you for reaching out! Your email client has been opened with the message details."
     );
     setName("");
     setEmail("");
