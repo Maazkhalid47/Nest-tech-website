@@ -36,7 +36,7 @@ export default function ContactForm() {
       "",
       m,
     ].filter(Boolean);
-    const mailto = `mailto:maazking47@gmail.com?subject=${encodeURIComponent(
+    const mailto = `mailto:info@nesttechnologies.io?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
 
