@@ -1,8 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import ContactForm from "@/components/ContactForm";
 import ResearchTags from "@/components/ResearchTags";
-import { workItems, articles } from "@/lib/data";
+import { workItems, articles, techIcons } from "@/lib/data";
 
 const SERVICES = [
   {
@@ -33,10 +34,35 @@ const SERVICES = [
 ];
 
 const TECH_STACK = [
-  { category: "Frontend", items: ["Flutter", "FlutterFlow", "Next.js"] },
-  { category: "Backend", items: ["Node.js", "Supabase", "PostgreSQL"] },
-  { category: "Cloud", items: ["Firebase", "Google Cloud"] },
-  { category: "Payments", items: ["Stripe"] },
+  { 
+    category: "Frontend", 
+    items: [
+      { name: "Flutter", icon: "🎨" },
+      { name: "FlutterFlow", icon: "⚡" },
+      { name: "Next.js", icon: "▲" }
+    ] 
+  },
+  { 
+    category: "Backend", 
+    items: [
+      { name: "Node.js", icon: "🟢" },
+      { name: "Supabase", icon: "🔷" },
+      { name: "PostgreSQL", icon: "🐘" }
+    ] 
+  },
+  { 
+    category: "Cloud", 
+    items: [
+      { name: "Firebase", icon: "🔥" },
+      { name: "Google Cloud", icon: "☁️" }
+    ] 
+  },
+  { 
+    category: "Payments", 
+    items: [
+      { name: "Stripe", icon: "💳" }
+    ] 
+  },
 ];
 
 const APPROACH_ITEMS = [
@@ -72,28 +98,32 @@ export default function Home() {
   return (
     <div id="mainSite">
       {/* HERO */}
-      <section className="hero" id="hero">
+           <section className="hero" id="hero">
         <div className="grid-bg" />
-        <p className="hero-eyebrow">Product Engineering Studio</p>
-        <h1 className="hero-title">
-          Building products with purpose,
-          <br />
-          <em>engineered to last.</em>
-        </h1>
-        <p className="hero-sub">
-          Nest Technologies is a product engineering studio helping startups
-          and businesses transform ambitious ideas into scalable digital
-          products. We combine product strategy, thoughtful design, and
-          modern engineering to build software that solves real business
-          problems—not just ship features.
-        </p>
-        <div className="hero-actions">
-          <Link href="#work" className="btn btn-primary">
-            View Our Work
-          </Link>
-          <Link href="#approach" className="btn btn-ghost">
-            Our Approach
-          </Link>
+        <div className="hero-grid">
+          <div className="hero-copy">
+            <p className="hero-eyebrow">Product Engineering Studio</p>
+            <h1 className="hero-title">
+              Building products with purpose,
+              <br />
+              <em>engineered to last.</em>
+            </h1>
+            
+            <div className="hero-actions">
+              <Link href="#work" className="btn btn-primary">
+                View Our Work
+              </Link>
+              <Link href="#approach" className="btn btn-ghost">
+                Our Approach
+              </Link>
+            </div>
+          </div>
+          <div className="hero-visual">
+            <img
+              src="/hero-architecture.png"
+              alt="Nest Technologies core architecture — Product, Engineering, Strategy, and Design working as one system"
+            />
+          </div>
         </div>
         <div className="hero-scroll">
           <div className="hero-scroll-line" />
@@ -204,6 +234,7 @@ export default function Home() {
                   <div className="work-tags">
                     {item.tags.map((tag) => (
                       <span key={tag} className="tag">
+                        <span className="tech-icon">{techIcons[tag] || '•'}</span>
                         {tag}
                       </span>
                     ))}
@@ -290,8 +321,9 @@ export default function Home() {
                 <h3>{group.category}</h3>
                 <div className="work-tags" style={{ marginTop: 14 }}>
                   {group.items.map((item) => (
-                    <span key={item} className="tag">
-                      {item}
+                    <span key={item.name} className="tag">
+                      <span className="tech-icon">{typeof item === 'string' ? '•' : item.icon}</span>
+                      {typeof item === 'string' ? item : item.name}
                     </span>
                   ))}
                 </div>

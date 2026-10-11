@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import BackLink from "@/components/BackLink";
-import { workItems } from "@/lib/data";
+import CaseGallery from "@/components/CaseGallery";
+import { techIcons, workItems } from "@/lib/data";
 
 export function generateStaticParams() {
   return workItems.map((item) => ({ slug: item.slug }));
@@ -20,6 +22,8 @@ export default async function WorkCaseStudy({
   const { slug } = await params;
   const item = workItems.find((w) => w.slug === slug);
   if (!item) notFound();
+  const currentIndex = workItems.findIndex((w) => w.slug === slug);
+  const nextItem = workItems[(currentIndex + 1) % workItems.length];
 
   return (
     <div className="page-wrap">
@@ -32,16 +36,26 @@ export default async function WorkCaseStudy({
           </span>
         </div>
         <h1>{item.name}</h1>
+        <p className="case-tagline">{item.tagline}</p>
         <div className="case-meta">
           {item.tags.slice(1).map((tag) => (
             <span key={tag} className="tag">
+              <span className="tech-icon">{techIcons[tag] || "•"}</span>
               {tag}
             </span>
           ))}
         </div>
       </div>
+      <div className="case-hero-banner">
+        <img src={item.gallery[0].src} alt={item.gallery[0].title} />
+      </div>
+      <section className="case-gallery-section">
+        <h2>Key Features</h2>
+        <CaseGallery gallery={item.gallery.slice(1)} />
+      </section>
       <div className="case-body">
         <div className="case-content">
+          <h2>Overview</h2>
           <p>{item.description}</p>
           <h2>The Problem</h2>
           <p>{item.problem}</p>
@@ -62,6 +76,7 @@ export default async function WorkCaseStudy({
             <div className="sidebar-tags">
               {item.tags.map((tag) => (
                 <span key={tag} className="tag">
+                  <span className="tech-icon">{techIcons[tag] || "•"}</span>
                   {tag}
                 </span>
               ))}
@@ -73,6 +88,10 @@ export default async function WorkCaseStudy({
           </div>
         </div>
       </div>
+      <Link className="case-next" href={`/work/${nextItem.slug}`}>
+        <span className="case-next-label">Next Project</span>
+        <span className="case-next-name">{nextItem.name} →</span>
+      </Link>
     </div>
   );
 }
