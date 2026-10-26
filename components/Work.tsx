@@ -1,4 +1,3 @@
-
 import Reveal from "@/components/Reveal";
 import { workItems, techIcons } from "@/data/work";
 import Link from "next/link";
@@ -40,7 +39,7 @@ function Work() {
                         <Link
                             key={item.slug}
                             href={`/work/${item.slug}`}
-                            className="flex flex-row group relative items-center gap-10 border rounded-4xl px-12 py-10 no-underline transition-colors duration-250 h-80 "
+                            className="flex flex-row group relative items-center gap-10 border rounded-4xl px-12 py-10 duration-300 ease-in-out hover:scale-95 h-80 "
                         >
                             <div className="flex flex-row gap-x-5">
                                 <p className="font-mono w-20 text-6xl pt-10 text-gray-400 group-hover:text-black">
