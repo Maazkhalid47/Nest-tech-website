@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import ThemeToggle from "./ThemeToggle.tsx";
+// import ThemeToggle from "./ThemeToggle.tsx";
 
 const NAV_LINKS = [
   { href: "/#philosophy", label: "Philosophy" },
@@ -36,7 +36,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
         <button
           className="nav-mobile-toggle"
           aria-label="Open menu"
