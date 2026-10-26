@@ -17,7 +17,7 @@
   --accent: #34d399;
   --accent2: #10b981;
   --white: #ffffff;
-  --font: "Manrope", sans-serif;
+  --font: var(--font-work-sans), sans-serif;
   --mono: "DM Mono", monospace;
 }
 

@@ -4,10 +4,16 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Arima } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 
 const arima = Arima({
   subsets: ["latin"],
   variable: "--font-arima",
+});
+
+const workSans = Work_Sans({
+  subsets: ["latin"],
+  variable: "--font-work-sans",
 });
 
 export const metadata: Metadata = {
@@ -37,7 +43,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={arima.variable}>
+      <body className={workSans.variable}>
         <ThemeProvider>
           <Navbar />
           {children}
