@@ -86,6 +86,7 @@ export default function CaseGallery({ gallery }: { gallery: GalleryShot[] }) {
               alt=""
             />
 
+            
             <span className="absolute bottom-[7px] left-[9px] font-mono text-[10px] text-gray-400 [text-shadow:0_1px_4px_#0a0a0a]">
               {String(index + 1).padStart(2, "0")}
             </span>
