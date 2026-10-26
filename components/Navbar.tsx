@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 import ThemeToggle from "./ThemeToggle.tsx";
 
 const NAV_LINKS = [
-  { href: "/#philosophy", label: "Philosophy" },
+  // { href: "/#philosophy", label: "Philosophy" },
   { href: "/#work", label: "Work" },
   { href: "/#stack", label: "Stack" },
-  { href: "/#insights", label: "Insights" },
+  // { href: "/#insights", label: "Insights" },
   { href: "/#contact", label: "Contact" },
 ];
 
