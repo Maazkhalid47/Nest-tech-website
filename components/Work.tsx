@@ -23,11 +23,11 @@ function Work() {
                 </p>
             </Reveal>
 
-            <Reveal delay={1}>
-                <h2 className="font-bold text-6xl">
+            <Reveal delay={1} className="text-6xl">
+                <h2>
                     Products &amp; systems
                     <br />
-                    <span className="font-semibold text-5xl">
+                    <span className="font-bold">
                         we&apos;ve built.
                     </span>
                 </h2>
@@ -39,7 +39,8 @@ function Work() {
                         <Link
                             key={item.slug}
                             href={`/work/${item.slug}`}
-                            className="flex flex-row group relative items-center gap-10 border rounded-4xl px-12 py-10 duration-300 ease-in-out hover:scale-95 h-80 "
+// radius
+                            className="flex flex-row group relative items-center gap-10 border border-gray-300 rounded px-12 py-10 duration-300 ease-in-out hover:scale-95 h-80 "
                         >
                             <div className="flex flex-row gap-x-5">
                                 <p className="font-mono w-20 text-6xl pt-10 text-gray-400 group-hover:text-black">
@@ -65,7 +66,8 @@ function Work() {
                                         {item.tags.map((tag) => (
                                             <span
                                                 key={tag}
-                                                className="inline-flex items-center gap-1.5 border rounded-lg px-2.5 py-1 font-mono text-xs "
+// radius
+                                                className="inline-flex items-center gap-1.5 border rounded px-2.5 py-1 font-mono text-xs "
                                             >
                                                 <span className="inline-flex items-center justify-center text-xs">
                                                     {techIcons[tag] || "•"}

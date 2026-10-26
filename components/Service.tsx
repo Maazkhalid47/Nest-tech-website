@@ -18,8 +18,8 @@ function Service() {
       </Reveal>
 
       <Reveal delay={2}>
-        <div className="flex">
-          <p className="font-bold text-6xl w-180">Everything you need to <span className="text-4xl font-(--font-arima)">build, launch & scale.</span></p>
+        <div className="flex text-6xl">
+          <p className="w-180">Everything you need to <span className="font-bold">build, launch & scale.</span></p>
 
           <p className=" text-gray-600 w-80 ml-52 pt-10 text-sm">One partner from first idea to millions of users — strategy, design, engineering and growth.</p>
         </div>
@@ -33,10 +33,12 @@ function Service() {
             <Reveal
               key={f.num}
               delay={((i % 3) + 1) as 1 | 2 | 3}
-              className="group relative overflow-hidden border border-gray-300 rounded-4xl bg-white p-10 transition-colors duration-300"
+              // radius
+              className="group relative overflow-hidden border border-gray-300 rounded bg-white p-10 transition-colors duration-300"
             >
               <div className="mb-5 flex items-center justify-between">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-gray-300 bg-gray-100 text-black transition-colors duration-300 group-hover:bg-black group-hover:text-white">
+                {/* radius */}
+                <div className="flex h-12 w-12 items-center justify-center rounded border border-gray-300 bg-gray-100 text-black transition-colors duration-300 group-hover:bg-black group-hover:text-white">
                   <Icon size={20} strokeWidth={1.7} />
                 </div>
 

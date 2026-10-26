@@ -17,8 +17,8 @@ function Hero() {
                             Product Engineering Studio</p>
                     </div>
 
-                    <div className="animate-[fadeUp_0.8s_0.2s_forwards] text-center w-190">
-                        <p className="font-bold text-6xl">Building products with purpose,<span className="font-(--font-arima) text-4xl">engineered to last.</span></p>
+                    <div className="animate-[fadeUp_0.8s_0.2s_forwards] text-6xl text-center w-200">
+                        <p className="font-">Building products with purpose,<span className="font-bold ">engineered to last.</span></p>
                     </div>
 
                     <div className=" my-10 animate-[fadeUp_0.9s_0.65s_forwards] space-x-5">
