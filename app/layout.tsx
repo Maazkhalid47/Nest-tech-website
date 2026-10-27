@@ -3,12 +3,6 @@ import Link from "next/link";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { Arima } from "next/font/google";
-
-const arima = Arima({
-  subsets: ["latin"],
-  variable: "--font-arima",
-});
 
 export const metadata: Metadata = {
   title: "Nest Technologies — Product Engineering Studio",
@@ -37,70 +31,70 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={arima.variable}>
+      <body>
         <ThemeProvider>
           <Navbar />
           {children}
           <footer>
-            <div className="footer-top">
-              <div className="footer-brand">
-                <p className="nav-logo" style={{ fontSize: 15, fontWeight: 600 }}>
-                  Nest Technologies
-                </p>
-                <p>
-                  A product engineering studio helping startups and businesses
-                  build scalable digital products.
-                </p>
-              </div>
-              <div className="footer-col">
-                <h4>Navigation</h4>
-                <ul>
-                  <li>
-                    <Link href="/#philosophy">Philosophy</Link>
-                  </li>
-                  <li>
-                    <Link href="/#work">Work</Link>
-                  </li>
-                  <li>
-                    <Link href="/#insights">Insights</Link>
-                  </li>
-                  <li>
-                    <Link href="/#contact">Contact</Link>
-                  </li>
-                </ul>
-              </div>
-              <div className="footer-col">
-                <h4>Connect</h4>
-                <ul>
-                  <li>
-                    <a
-                      href="https://github.com/Maazkhalid47/Nest-tech-website"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      GitHub
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://linkedin.com/in/marskhalid"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      LinkedIn
-                    </a>
-                  </li>
-                </ul>
-              </div>
+          <div className="footer-top">
+            <div className="footer-brand">
+              <p className="nav-logo" style={{ fontSize: 15, fontWeight: 600 }}>
+                Nest Technologies
+              </p>
+              <p>
+                A product engineering studio helping startups and businesses
+                build scalable digital products.
+              </p>
             </div>
-            <div className="footer-bottom">
-              <p>© 2026 Nest Technologies. All rights reserved.</p>
-              <div className="footer-bottom-links">
-                <Link href="/privacy">Privacy</Link>
-                <Link href="/terms">Terms</Link>
-              </div>
+            <div className="footer-col">
+              <h4>Navigation</h4>
+              <ul>
+                <li>
+                  <Link href="/#philosophy">Philosophy</Link>
+                </li>
+                <li>
+                  <Link href="/#work">Work</Link>
+                </li>
+                <li>
+                  <Link href="/#insights">Insights</Link>
+                </li>
+                <li>
+                  <Link href="/#contact">Contact</Link>
+                </li>
+              </ul>
             </div>
-          </footer>
+            <div className="footer-col">
+              <h4>Connect</h4>
+              <ul>
+                <li>
+                  <a
+                    href="https://github.com/Maazkhalid47/Nest-tech-website"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://linkedin.com/in/marskhalid"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <p>© 2026 Nest Technologies. All rights reserved.</p>
+            <div className="footer-bottom-links">
+              <Link href="/privacy">Privacy</Link>
+              <Link href="/terms">Terms</Link>
+            </div>
+          </div>
+        </footer>
         </ThemeProvider>
       </body>
     </html>
