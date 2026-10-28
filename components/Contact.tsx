@@ -58,7 +58,7 @@ function Contact() {
                             </label>
                             <span className="text-black pr-3">
                                 Karachi, Pakistan
-                            </p>
+                            </span>
                         </div>
 
                         <div className="flex border py-3 rounded-2xl justify-between">
@@ -67,7 +67,7 @@ function Contact() {
                             </label>
                             <span className="text-black pr-3">
                                 Monday–Friday, 9:00 AM – 6:00 PM PKT
-                            </p>
+                            </span>
                         </div>
 
                     </div>
