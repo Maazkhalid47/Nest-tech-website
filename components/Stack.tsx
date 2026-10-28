@@ -25,8 +25,7 @@ function Stack() {
           {TECH_STACK.map((group) => (
             <div
               key={group.category}
-// radius 
-              className="relative overflow-hidden p-10 border border-gray-300 rounded- bg-white transition-transform duration-300 ease-in-out hover:scale-105"
+              className="relative overflow-hidden p-10 border border-black rounded-2xl bg-white transition-transform duration-300 ease-in-out hover:scale-105"
             >
               <h3 className="mb-3 text-2xl font-bold text-black">
                 {group.category}
@@ -36,8 +35,7 @@ function Stack() {
                 {group.items.map((item) => (
                   <span
                     key={typeof item === "string" ? item : item.name}
-// radius 
-                    className="inline-flex items-center gap-1.5 rounded border px-2.5 py-1 font-mono text-xs text-gray-400"
+                    className="inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 font-mono text-xs text-gray-400"
                   >
                     <span className="inline-flex items-center justify-center text-xs">
                       {typeof item === "string" ? "•" : item.icon}
