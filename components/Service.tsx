@@ -10,7 +10,7 @@ const ICONS = {
 
 function Service() {
   return (
-    <section id="service" className="px-12 py-30 bg-[#f5f9f6]">
+    <section id="service" className="px-12 py-30 bg-[#fdfdfd]">
       <Reveal delay={1}>
         <p className="mb-5 text-gray-600">
           Our Services
@@ -18,14 +18,12 @@ function Service() {
       </Reveal>
 
       <Reveal delay={2}>
-        <div className="flex text-6xl">
-          <p className="w-180">Everything you need to <span className="font-bold">build, launch & scale.</span></p>
-
-          <p className=" text-gray-600 w-80 ml-52 pt-10 text-sm">One partner from first idea to millions of users — strategy, design, engineering and growth.</p>
+        <div className="text-6xl">
+          <p className="w-180">Everything you need to <span className="font-semibold">build, launch & scale.</span></p>
         </div>
       </Reveal>
 
-      <div className="mt-20 grid grid-cols-1 gap-7 bg-[#f5f9f6] md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-20 grid grid-cols-1 gap-7 bg-[#fdfdfd] md:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((f, i) => {
           const Icon = ICONS[f.icon as keyof typeof ICONS];
 
@@ -38,7 +36,7 @@ function Service() {
             >
               <div className="mb-5 flex items-center justify-between">
                 {/* radius */}
-                <div className="flex h-12 w-12 items-center justify-center rounded border border-gray-300 bg-gray-100 text-black transition-colors duration-300 group-hover:bg-black group-hover:text-white">
+                <div className="flex h-12 w-12 items-center justify-center rounded border border-gray-300 bg-[#fdfdfd] text-black transition-colors duration-300 group-hover:bg-black group-hover:text-white">
                   <Icon size={20} strokeWidth={1.7} />
                 </div>
 
@@ -63,3 +61,6 @@ function Service() {
 }
 
 export default Service;
+
+
+// #fdfdfd
