@@ -62,7 +62,7 @@ function Contact() {
                             </label>
                             <p className="pt-1">
                                 Karachi, Pakistan
-                            </p>
+                            </span>
                         </div>
 
                         <div className="text-gray-600">
@@ -71,7 +71,7 @@ function Contact() {
                             </label>
                             <p className="pt-1">
                                 Monday–Friday, 9:00 AM – 6:00 PM PKT
-                            </p>
+                            </span>
                         </div>
 
                     </div>
