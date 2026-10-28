@@ -23,11 +23,11 @@ function Work() {
                 </p>
             </Reveal>
 
-            <Reveal delay={1}>
-                <h2 className="font-bold text-6xl">
+            <Reveal delay={1} className="text-6xl">
+                <h2>
                     Products &amp; systems
                     <br />
-                    <span className="font-semibold text-5xl">
+                    <span className="font-bold">
                         we&apos;ve built.
                     </span>
                 </h2>
@@ -65,7 +65,8 @@ function Work() {
                                         {item.tags.map((tag) => (
                                             <span
                                                 key={tag}
-                                                className="inline-flex items-center gap-1.5 border rounded-lg px-2.5 py-1 font-mono text-xs "
+// radius
+                                                className="inline-flex items-center gap-1.5 border rounded px-2.5 py-1 font-mono text-xs "
                                             >
                                                 <span className="inline-flex items-center justify-center text-xs">
                                                     {techIcons[tag] || "•"}

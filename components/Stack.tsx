@@ -9,14 +9,14 @@ function Stack() {
       className="px-12 py-30 max-[600px]:px-6 max-[600px]:py-20 bg-[#f5f9f6]"
     >
       <Reveal>
-        <p className="mb-5 text-xs uppercase tracking-[0.18em] text-gray-400">
+        <p className="mb-5 text-gray-400">
           Technology Stack
         </p>
       </Reveal>
 
       <Reveal delay={1}>
-        <h2 className="font-bold text-7xl text-black">
-          Tools we <span className="font-semibold text-5xl">build with.</span>
+        <h2 className="text-black text-6xl">
+          Tools we <span className="font-bold">build with.</span>
         </h2>
       </Reveal>
 

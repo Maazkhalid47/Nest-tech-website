@@ -17,14 +17,14 @@
   --accent: #34d399;
   --accent2: #10b981;
   --white: #ffffff;
-  --font: "Manrope", sans-serif;
+  --font: var(--font-work-sans), sans-serif;
   --mono: "DM Mono", monospace;
 }
 
 .light {
   --bg: #ffffff;
-  --bg2: #f5f9f6;
-  --bg3: #eef4f0;
+  --bg2: #ffffff;
+  --bg3: #ffffff;
   --border: #e2ebe5;
   --border2: #d2ded6;
   --grid-line: #a9c2b3;
@@ -53,9 +53,11 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 img {

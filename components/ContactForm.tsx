@@ -86,11 +86,11 @@ export default function ContactForm() {
   return (
     <>
       <div
-        className="flex flex-col gap-5 rounded-lg border border-white/10 bg-[#141414] p-10 max-[600px]:p-5"
+        className="flex flex-col bg-[#f5f9f6] gap-5 rounded-lg border border-gray-300  p-10 max-[600px]:p-5"
         id="contact-form"
       >
         <div className="flex flex-col gap-2">
-          <label className="font-mono text-xs uppercase tracking-[0.08em] text-gray-400">
+          <label className=" text-gray-400">
             Full Name
           </label>
           <input
@@ -98,12 +98,12 @@ export default function ContactForm() {
             placeholder="Your name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="rounded border border-white/15 bg-[#0a0a0a] px-4 py-3 text-[15px] text-white outline-none transition-colors duration-200 focus:border-emerald-400"
+            className="rounded border bg-white border-gray-200 px-2 py-3 text-[15px] text-gray-700 outline-none transition-colors duration-200 focus:border-gray-400"
           />
         </div>
 
         <div className="flex flex-col gap-2">
-          <label className="font-mono text-xs uppercase tracking-[0.08em] text-gray-400">
+          <label className=" text-gray-400">
             Email Address
           </label>
           <input
@@ -111,12 +111,12 @@ export default function ContactForm() {
             placeholder="your@email.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="rounded border border-white/15 bg-[#0a0a0a] px-4 py-3 text-[15px] text-white outline-none transition-colors duration-200 focus:border-emerald-400"
+            className="rounded border bg-white border-gray-200 px-2 py-3 text-[15px] text-gray-700 outline-none transition-colors duration-200 focus:border-gray-400"
           />
         </div>
 
         <div className="flex flex-col gap-2">
-          <label className="font-mono text-xs uppercase tracking-[0.08em] text-gray-400">
+          <label className="text-gray-400">
             Company (Optional)
           </label>
           <input
@@ -124,12 +124,12 @@ export default function ContactForm() {
             placeholder="Your company"
             value={company}
             onChange={(e) => setCompany(e.target.value)}
-            className="rounded border border-white/15 bg-[#0a0a0a] px-4 py-3 text-[15px] text-white outline-none transition-colors duration-200 focus:border-emerald-400"
+            className="rounded border bg-white border-gray-200 px-2 py-3 text-[15px] text-gray-700 outline-none transition-colors duration-200 focus:border-gray-400"
           />
         </div>
 
         <div className="flex flex-col gap-2">
-          <label className="font-mono text-xs uppercase tracking-[0.08em] text-gray-400">
+          <label className="text-gray-400">
             Project Budget (Optional)
           </label>
           <input
@@ -137,24 +137,24 @@ export default function ContactForm() {
             placeholder="e.g. $5,000 - $10,000"
             value={budget}
             onChange={(e) => setBudget(e.target.value)}
-            className="rounded border border-white/15 bg-[#0a0a0a] px-4 py-3 text-[15px] text-white outline-none transition-colors duration-200 focus:border-emerald-400"
+            className="rounded border bg-white border-gray-200 px-2 py-3 text-[15px] text-gray-700 outline-none transition-colors duration-200 focus:border-gray-400"
           />
         </div>
 
-        <div className="flex flex-col gap-2">
-          <label className="font-mono text-xs uppercase tracking-[0.08em] text-gray-400">
+        <div className="flex flex-col gap-2 ">
+          <label className="text-gray-400">
             Message
           </label>
           <textarea
             placeholder="Tell us about your project..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="h-30 resize-none rounded border border-white/15 bg-[#0a0a0a] px-4 py-3 text-[15px] text-white outline-none transition-colors duration-200 focus:border-emerald-400"
+            className="h-30 resize-none rounded bg-white border border-gray-200 px-2 py-3 text-[15px] text-gray-700  outline-none transition-colors duration-200 focus:border-gray-400"
           />
         </div>
 
         <button
-          className="self-start rounded border-0 bg-white px-7 py-3.5 text-[15px] font-semibold text-[#0a0a0a] transition-all duration-200 hover:-translate-y-px hover:bg-emerald-400"
+          className="self-start rounded border-0 bg-black px-7 py-3.5 text-[15px] font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-emerald-600"
           onClick={handleSubmit}
         >
           Send Message

@@ -23,7 +23,7 @@ function Contact() {
                 </h2>
             </Reveal>
 
-            <div className="mt-18 grid grid-cols-2 items-center gap-30 max-[900px]:grid-cols-1 max-[900px]:gap-12">
+            <div className="grid grid-cols-2 items-center gap-30 max-[900px]:grid-cols-1 max-[900px]:gap-12">
                 <Reveal delay={2} className="min-w-0">
                     <p className="mt-6 max-w-105 text-xl text-gray-400">
                         We partner with founders and businesses who are building ambitious
@@ -58,7 +58,7 @@ function Contact() {
                             </label>
                             <span className="text-black pr-3">
                                 Karachi, Pakistan
-                            </span>
+                            </p>
                         </div>
 
                         <div className="flex border py-3 rounded-2xl justify-between">
@@ -67,8 +67,9 @@ function Contact() {
                             </label>
                             <span className="text-black pr-3">
                                 Monday–Friday, 9:00 AM – 6:00 PM PKT
-                            </span>
+                            </p>
                         </div>
+
                     </div>
                 </Reveal>
 
