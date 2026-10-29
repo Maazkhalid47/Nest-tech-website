@@ -86,7 +86,7 @@ export default function ContactForm() {
   return (
     <>
       <div
-        className="flex flex-col bg-[#f5f9f6] gap-5 rounded-lg border border-gray-300  p-10 max-[600px]:p-5"
+        className="flex flex-col bg-[#fdfdfd] gap-5 rounded-lg border border-gray-300  p-10 max-[600px]:p-5"
         id="contact-form"
       >
         <div className="flex flex-col gap-2">

@@ -2,78 +2,81 @@ import BackLink from "@/components/BackLink";
 
 export default function PrivacyPage() {
   return (
-    <div className="page-wrap">
+    <div className="">
       <BackLink href="/" />
-      <p className="section-tag" style={{ marginBottom: 16 }}>
+      <p className="">
         Legal
       </p>
-      <h1
-        style={{
-          fontSize: "clamp(32px,4vw,56px)",
-          fontWeight: 300,
-          letterSpacing: "-.025em",
-          color: "var(--white)",
-          marginBottom: 48,
-        }}
-      >
+      <h1>
         Privacy Policy
       </h1>
-      <div className="legal-content">
-        <p>Effective Date: July 19, 2026</p>
-        <p>
-          Nest Technologies (&quot;we&quot;, &quot;our&quot;, or
-          &quot;us&quot;) respects your privacy and is committed to
-          protecting the personal information you share with us. This
-          Privacy Policy explains what information we collect through our
-          website, how we use it, and the choices available to you.
-        </p>
+      <div className="">
 
-        <h2>1. Information We Collect</h2>
-        <p>
-          When you interact with our website, we may collect the following
-          information:
-        </p>
-        <p>
-          <strong>Information You Provide</strong>
-        </p>
-        <ul>
-          <li>Name</li>
-          <li>Email address</li>
-          <li>Company name (if provided)</li>
-          <li>Project details or messages submitted through our contact form</li>
-        </ul>
-        <p>
-          <strong>Information Collected Automatically</strong>
-        </p>
-        <p>
-          When you visit our website, certain technical information may be
-          collected automatically, including:
-        </p>
-        <ul>
-          <li>IP address</li>
-          <li>Browser type and version</li>
-          <li>Device information</li>
-          <li>Pages visited</li>
-          <li>Date and time of access</li>
-          <li>Referring website</li>
-        </ul>
-        <p>
-          This information is collected for analytics, security, and
-          performance monitoring purposes.
-        </p>
+        <div>
+          <p>Effective Date: July 19, 2026</p>
+          <p>
+            Nest Technologies (&quot;we&quot;, &quot;our&quot;, or
+            &quot;us&quot;) respects your privacy and is committed to
+            protecting the personal information you share with us. This
+            Privacy Policy explains what information we collect through our
+            website, how we use it, and the choices available to you.
+          </p>
+        </div>
 
-        <h2>2. How We Use Your Information</h2>
-        <p>We use the information we collect to:</p>
-        <ul>
-          <li>Respond to inquiries and project requests.</li>
-          <li>Communicate regarding our services.</li>
-          <li>Improve our website and user experience.</li>
-          <li>Maintain website security and reliability.</li>
-          <li>Analyze website traffic and performance.</li>
-          <li>Comply with legal obligations where required.</li>
-        </ul>
-        <p>We do not sell, rent, or trade your personal information.</p>
+        {/* ----------------------------------------- */}
+        <div>
+          <h2>1. Information We Collect</h2>
+          <p>
+            When you interact with our website, we may collect the following
+            information:
+          </p>
+          <p>
+            <strong>Information You Provide</strong>
+          </p>
+          <ul>
+            <li>Name</li>
+            <li>Email address</li>
+            <li>Company name (if provided)</li>
+            <li>Project details or messages submitted through our contact form</li>
+          </ul>
+          <p>
+            <strong>Information Collected Automatically</strong>
+          </p>
+          <p>
+            When you visit our website, certain technical information may be
+            collected automatically, including:
+          </p>
+          <ul>
+            <li>IP address</li>
+            <li>Browser type and version</li>
+            <li>Device information</li>
+            <li>Pages visited</li>
+            <li>Date and time of access</li>
+            <li>Referring website</li>
+          </ul>
+          <p>
+            This information is collected for analytics, security, and
+            performance monitoring purposes.
+          </p>
+        </div>
 
+{/* ---------------------------------------- */}
+        <div>
+          <h2>2. How We Use Your Information</h2>
+          <p>We use the information we collect to:</p>
+          <ul>
+            <li>Respond to inquiries and project requests.</li>
+            <li>Communicate regarding our services.</li>
+            <li>Improve our website and user experience.</li>
+            <li>Maintain website security and reliability.</li>
+            <li>Analyze website traffic and performance.</li>
+            <li>Comply with legal obligations where required.</li>
+          </ul>
+          <p>We do not sell, rent, or trade your personal information.</p>
+
+        </div>
+
+{/* -------------------------------------- */}
         <h2>3. Cookies and Analytics</h2>
         <p>
           Our website may use cookies and similar technologies to improve
