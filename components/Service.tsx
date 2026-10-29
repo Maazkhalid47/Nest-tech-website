@@ -1,0 +1,66 @@
+import Reveal from "@/components/Reveal";
+import { SERVICES } from "@/data/service";
+import {
+  Compass, PenTool, Earth, Smartphone, Server, Gauge, CreditCard, ChartNoAxesCombined, BriefcaseBusiness, Network, Rocket, Globe, Palette, Search,
+} from "lucide-react";
+
+const ICONS = {
+  Compass, PenTool, Earth, Smartphone, Server, Gauge, CreditCard, ChartNoAxesCombined, BriefcaseBusiness, Network, Rocket, Globe, Palette, Search,
+};
+
+function Service() {
+  return (
+    <section id="service" className="px-12 py-30 bg-[#fdfdfd]">
+      {/* <Reveal delay={1}>
+        <p className="mb-5 text-gray-600">
+          Our Services
+        </p>
+      </Reveal> */}
+
+      <Reveal delay={2}>
+        <div className=" text-4xl sm:text-5xl md:text-6xl">
+          <p className="md:w-180">Everything you need to <span className="font-semibold">build, launch & scale.</span></p>
+        </div>
+      </Reveal>
+
+      <div className="mt-20 grid grid-cols-1 gap-7 bg-[#fdfdfd] md:grid-cols-2 lg:grid-cols-3">
+        {SERVICES.map((f, i) => {
+          const Icon = ICONS[f.icon as keyof typeof ICONS];
+
+          return (
+            <Reveal
+              key={f.num}
+              delay={((i % 3) + 1) as 1 | 2 | 3}
+              // radius
+              className="group relative overflow-hidden border border-gray-300 rounded bg-white p-10 transition-colors duration-300"
+            >
+              <div className="mb-5 flex items-center justify-between">
+                {/* radius */}
+                <div className="flex h-12 w-12 items-center justify-center rounded border border-gray-300 bg-[#fdfdfd] text-black transition-colors duration-300 group-hover:bg-black group-hover:text-white">
+                  <Icon size={20} strokeWidth={1.7} />
+                </div>
+
+                <div className="font-mono text-gray-400">
+                  {f.num}
+                </div>
+              </div>
+
+              <h3 className="mb-3 text-lg font-semibold tracking-tight text-black">
+                {f.title}
+              </h3>
+
+              <p className="text-gray-600">
+                {f.desc}
+              </p>
+            </Reveal>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+export default Service;
+
+
+// #fdfdfd

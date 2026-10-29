@@ -85,56 +85,87 @@ export default function ContactForm() {
 
   return (
     <>
-      <div className="contact-form" id="contact-form">
-        <div className="form-group">
-          <label>Full Name</label>
+      <div
+        className="flex flex-col bg-[#fdfdfd] gap-5 rounded-lg border border-gray-300  p-10 max-[600px]:p-5"
+        id="contact-form"
+      >
+        <div className="flex flex-col gap-2">
+          <label className=" text-gray-400">
+            Full Name
+          </label>
           <input
             type="text"
             placeholder="Your name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            className="rounded border bg-white border-gray-200 px-2 py-3 text-[15px] text-gray-700 outline-none transition-colors duration-200 focus:border-gray-400"
           />
         </div>
-        <div className="form-group">
-          <label>Email Address</label>
+
+        <div className="flex flex-col gap-2">
+          <label className=" text-gray-400">
+            Email Address
+          </label>
           <input
             type="email"
             placeholder="your@email.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="rounded border bg-white border-gray-200 px-2 py-3 text-[15px] text-gray-700 outline-none transition-colors duration-200 focus:border-gray-400"
           />
         </div>
-        <div className="form-group">
-          <label>Company (Optional)</label>
+
+        <div className="flex flex-col gap-2">
+          <label className="text-gray-400">
+            Company (Optional)
+          </label>
           <input
             type="text"
             placeholder="Your company"
             value={company}
             onChange={(e) => setCompany(e.target.value)}
+            className="rounded border bg-white border-gray-200 px-2 py-3 text-[15px] text-gray-700 outline-none transition-colors duration-200 focus:border-gray-400"
           />
         </div>
-        <div className="form-group">
-          <label>Project Budget (Optional)</label>
+
+        <div className="flex flex-col gap-2">
+          <label className="text-gray-400">
+            Project Budget (Optional)
+          </label>
           <input
             type="text"
             placeholder="e.g. $5,000 - $10,000"
             value={budget}
             onChange={(e) => setBudget(e.target.value)}
+            className="rounded border bg-white border-gray-200 px-2 py-3 text-[15px] text-gray-700 outline-none transition-colors duration-200 focus:border-gray-400"
           />
         </div>
-        <div className="form-group">
-          <label>Message</label>
+
+        <div className="flex flex-col gap-2 ">
+          <label className="text-gray-400">
+            Message
+          </label>
           <textarea
             placeholder="Tell us about your project..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            className="h-30 resize-none rounded bg-white border border-gray-200 px-2 py-3 text-[15px] text-gray-700  outline-none transition-colors duration-200 focus:border-gray-400"
           />
         </div>
-        <button className="form-submit" onClick={handleSubmit}>
+
+        <button
+          className="self-start rounded border-0 bg-black px-7 py-3.5 text-[15px] font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-emerald-600"
+          onClick={handleSubmit}
+        >
           Send Message
         </button>
       </div>
-      <div className={`toast${toast.show ? " show" : ""}`}>{toast.text}</div>
+
+      <div
+        className={`fixed bottom-8 right-8 z-999 pointer-events-none rounded-md bg-[#141414] px-5 py-3 text-[15px] font-semibold text-white transition-all duration-300 max-[600px]:right-4 max-[600px]:bottom-4 ${toast.show ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"}`}
+      >
+        {toast.text}
+      </div>
     </>
   );
 }
