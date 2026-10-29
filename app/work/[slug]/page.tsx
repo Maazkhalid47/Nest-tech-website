@@ -33,7 +33,7 @@ export default async function WorkCaseStudy({
   const nextItem = workItems[(currentIndex + 1) % workItems.length];
 
   return (
-    <div className="min-h-screen px-12 pt-[140px] pb-20 max-[600px]:px-5 max-[600px]:pt-24">
+    <div className="min-h-screen px-12 pt-36 pb-20 max-[600px]:px-5 max-[600px]:pt-24">
       <BackLink href="/#work" />
 
       <div className="mb-20">
@@ -41,7 +41,7 @@ export default async function WorkCaseStudy({
           <span className={tagClass}>{item.tags[0]}</span>
 
           <span
-            className={`rounded-full px-3 py-[5px] font-mono text-xs uppercase tracking-[0.06em] ${statusClass[item.status] ??
+            className={`rounded-full px-3 py-1.5 font-mono text-xs uppercase tracking-[0.06em] ${statusClass[item.status] ??
               "border border-white/15 text-gray-400"
               }`}
           >
@@ -69,16 +69,16 @@ export default async function WorkCaseStudy({
         </div>
       </div>
 
-      <div className="mb-[60px] flex items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-[#141414] p-6 max-[600px]:p-4">
+      <div className="mb-16 flex items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-[#141414] p-6 max-[600px]:p-4">
         <img
-          className="max-h-[480px] w-full object-contain"
+          className="max-h-120 w-full object-contain"
           src={item.gallery[0].src}
           alt={item.gallery[0].title}
         />
       </div>
 
       <section className="mb-20 w-full max-[560px]:mb-14">
-        <h2 className="mb-[18px] text-lg font-semibold tracking-[-0.01em] text-white">
+        <h2 className="mb-4.5 text-lg font-semibold tracking-[-0.01em] text-white">
           Key Features
         </h2>
 
@@ -155,7 +155,7 @@ export default async function WorkCaseStudy({
       </div>
 
       <Link
-        className="mt-[60px] flex items-center justify-between rounded-2xl border border-white/10 bg-[#141414] px-8 py-7 no-underline transition-[border-color,transform] duration-200 hover:-translate-y-0.5 hover:border-emerald-400 max-[600px]:gap-4 max-[600px]:px-5"
+        className="mt-16 flex items-center justify-between rounded-2xl border border-white/10 bg-[#141414] px-8 py-7 no-underline transition-[border-color,transform] duration-200 hover:-translate-y-0.5 hover:border-emerald-400 max-[600px]:gap-4 max-[600px]:px-5"
         href={`/work/${nextItem.slug}`}
       >
         <span className="text-xs font-semibold tracking-[0.06em] text-gray-500 uppercase">

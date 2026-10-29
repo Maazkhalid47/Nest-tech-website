@@ -17,17 +17,17 @@ function Work() {
             id="work"
             className="bg-white px-12 py-30 max-[900px]:px-6 max-[900px]:py-20"
         >
-            <Reveal>
+            {/* <Reveal>
                 <p className="mb-10 font-semibold text-sm text-gray-400">
                     Work
                 </p>
-            </Reveal>
+            </Reveal> */}
 
-            <Reveal delay={1} className="text-6xl">
+            <Reveal delay={1} className="text-4xl sm:text-5xl md:text-6xl">
                 <h2>
                     Products &amp; systems
                     <br />
-                    <span className="font-bold">
+                    <span className="font-semibold">
                         we&apos;ve built.
                     </span>
                 </h2>
@@ -39,10 +39,10 @@ function Work() {
                         <Link
                             key={item.slug}
                             href={`/work/${item.slug}`}
-                            className="flex flex-row group relative items-center gap-10 border rounded-4xl px-12 py-10 duration-300 ease-in-out hover:scale-95 h-80 "
+                            className="flex flex-row group relative items-center border border-gray-300 rounded px-12 py-10 duration-300 ease-in-out hover:scale-95 sm:h-80 "
                         >
                             <div className="flex flex-row gap-x-5">
-                                <p className="font-mono w-20 text-6xl pt-10 text-gray-400 group-hover:text-black">
+                                <p className="font-mono w-20 text-4xl sm:text-6xl pt-10 text-gray-400 group-hover:text-black hidden sm:block">
                                     {item.num}
                                 </p>
 

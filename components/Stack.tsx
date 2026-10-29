@@ -6,17 +6,17 @@ function Stack() {
   return (
     <section
       id="stack"
-      className="px-12 py-30 max-[600px]:px-6 max-[600px]:py-20 bg-[#f5f9f6]"
+      className="px-12 py-30 max-[600px]:px-6 max-[600px]:py-20 bg-[#fdfdfd]"
     >
-      <Reveal>
+      {/* <Reveal>
         <p className="mb-5 text-gray-400">
           Technology Stack
         </p>
-      </Reveal>
+      </Reveal> */}
 
       <Reveal delay={1}>
-        <h2 className="text-black text-6xl">
-          Tools we <span className="font-bold">build with.</span>
+        <h2 className="text-black text-4xl sm:text-6xl">
+          Tools we <span className="font-semibold">build with.</span>
         </h2>
       </Reveal>
 
@@ -25,9 +25,9 @@ function Stack() {
           {TECH_STACK.map((group) => (
             <div
               key={group.category}
-              className="relative overflow-hidden p-10 border border-black rounded-2xl bg-white transition-transform duration-300 ease-in-out hover:scale-105"
+              className="relative overflow-hidden p-10 border border-gray-300 rounded bg-white transition-transform duration-300 ease-in-out hover:scale-105"
             >
-              <h3 className="mb-3 text-2xl font-bold text-black">
+              <h3 className="mb-3 text-2xl font-semibold text-black">
                 {group.category}
               </h3>
 

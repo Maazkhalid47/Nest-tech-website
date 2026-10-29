@@ -11,15 +11,15 @@ const ICONS = {
 function Service() {
   return (
     <section id="service" className="px-12 py-30 bg-[#fdfdfd]">
-      <Reveal delay={1}>
+      {/* <Reveal delay={1}>
         <p className="mb-5 text-gray-600">
           Our Services
         </p>
-      </Reveal>
+      </Reveal> */}
 
       <Reveal delay={2}>
-        <div className="text-6xl">
-          <p className="w-180">Everything you need to <span className="font-semibold">build, launch & scale.</span></p>
+        <div className=" text-4xl sm:text-5xl md:text-6xl">
+          <p className="md:w-180">Everything you need to <span className="font-semibold">build, launch & scale.</span></p>
         </div>
       </Reveal>
 
@@ -40,7 +40,7 @@ function Service() {
                   <Icon size={20} strokeWidth={1.7} />
                 </div>
 
-                <div className="font-mono text-xs tracking-widest text-gray-400">
+                <div className="font-mono text-gray-400">
                   {f.num}
                 </div>
               </div>
@@ -49,7 +49,7 @@ function Service() {
                 {f.title}
               </h3>
 
-              <p className="text-[15px] font-light leading-relaxed text-black">
+              <p className="text-gray-600">
                 {f.desc}
               </p>
             </Reveal>
